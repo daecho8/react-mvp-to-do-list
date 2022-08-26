@@ -1,7 +1,11 @@
+import SavedList from "./component/SavedList.js"
+
 function App() {
+
   return (
-    <div className="App">
-      START MVP PROJECT
+    <div>
+      <SavedList />
+      hell
     </div>
   );
 }
