@@ -34,8 +34,9 @@ app.get("/api/list", (req, res) => {
 });
 
 app.post("/api/list", (req, res) => {
-    const listName = req.body.list_name;  
-    pool.query(`INSERT INTO todolist(list_name) VALUES ($1) RETURNING *;`, [listName])
+    // const listName = req.body.list_name;  
+    const {description} =req.body;
+    pool.query(`INSERT INTO todolist(list_name) VALUES ($1) RETURNING *;`, [description])
     .then((data) => {
         console.log(data);
         if (data.rows.length === 0) {
@@ -47,8 +48,10 @@ app.post("/api/list", (req, res) => {
 });
 
 app.delete("/api/list/:id", (req, res) => {
-    const id = req.params.id;
-    pool.query(`DELETE FROM todoList WHERE id = $1 RETURNING *;`, [id]).then((data) => {
+    // const id = req.params.id;
+    const { id } = req.params;
+    pool.query(`DELETE FROM todoList WHERE id = $1 RETURNING *;`, [id])
+    .then((data) => {
         console.log(data);
         if(data.rows.length === 0) {
             res.sendStatus(404);
