@@ -32,14 +32,14 @@ const SavedList = () => {
         return null;
     }
 
+   
     return (
-        <div>
-            
+        <div className="saved-list-container">    
             {listState.map(item => {
                 return (
-                    <ul >
-                        <li key={item.id}>{item["list_name"]}
-                        <button id={item.id} onClick={deleteList} className="delete_btn">DELETE</button>
+                    <ul key={item.id} className="saved-list">
+                        <li className="list">{item["list_name"]}
+                        <button id={item.id} onClick={deleteList} className="delete-btn">DELETE</button>
                     </li>
                     </ul>
                     )
@@ -50,3 +50,4 @@ const SavedList = () => {
 }
 
 export default SavedList
+

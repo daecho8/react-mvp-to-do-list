@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+body{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    background-image: url("justdoit_background.jpg");
+    /* background-size:cover; */
+}
+
+.delete-btn {
+    background-image: url("justdoit_background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.header-container {
+    padding: 20px 0;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+.header {
+    width: 800px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 20px;
+}
+.header-title {
+    margin-left: 10px;
+    /* padding-left: 38%; */
+    color: yellowgreen;
+    display: flex;
+}
+.header-mark {
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 150px;
+    font-size: 25px;
+    color: yellow;
+}
+
+.new-list-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.new-list {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    box-shadow: 0 5px 10px black;
+    width: 800px;
+    
+
+}
+.new-list-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(149, 200, 237);
+    color: black;
+    font-size: 20px;
+}
+/* .input::placeholder {
+    color: white;
+} */
+.add-btn {
+    width: 100px;
+    background-color: black;
+    color: rgb(238, 205, 18);
+}
+
+
+.saved-list-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    flex-direction: column;
+    padding-left: 50px;
+    
+}
+.saved-list {
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: lightskyblue;
+    color: darkblue;
+}
+.list {
+    list-style-type: none;
+    width: 700px;
+    border: 1px dashed gray;
+    height: 50px;
+    position: relative;
+    color: black;
+    font-size: 20px;
+    align-items: center;
+    padding-left: 40px;
+    
+}
+.delete-btn {
+    border-radius: 10px;
+    width: 80px;
+    right: 20px;
+    position: absolute;
+    color: rgb(216, 55, 55);
+    background-color: rgb(10, 8, 8);
+    font-weight: bold;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
+.footer {
+    width: 700px;
+    border: 1px solid green;
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+}

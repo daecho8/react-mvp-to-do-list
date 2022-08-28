@@ -25,10 +25,12 @@ const AddNewList = () => {
     }
 
     return (
-        <form>
-            <input type="text" placeholder='TYPE NEW TASK' onChange={putNewTask}/>
-            <input type="submit" value="ADD" onClick={clickAdd}/>
-        </form>
+        <div className='new-list-container'>
+            <form className='new-list'>
+                <input className="new-list-input" type="text" placeholder='Enter New Task' onChange={putNewTask}/>
+                <input className="add-btn" type="submit" value="ADD" onClick={clickAdd}/>
+            </form>
+        </div>
     )
 }
 
