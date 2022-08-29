@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useState, useEffect } from "react";
 
 const AddNewList = () => {
     const [newTask, setNewTask] = useState("");
@@ -21,7 +20,6 @@ const AddNewList = () => {
             console.log(task)
             setNewTask([...newTask, task])
         })
-
     }
 
     return (

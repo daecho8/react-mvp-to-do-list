@@ -3,18 +3,18 @@ import { useState, useEffect } from "react";
 const SavedList = () => {
     const [listState, setListState] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/api/list")
-        .then((res) => {
-            return res.json();
-        })
-        .then((data) => {
-            // console.log((Object.keys(data)))
-            // console.log((data[0]))
-            // console.log((data[0]["list_name"]))
-            setListState(data)
-        })
-    }, [listState])
-    // console.log(listState[0]["id"])
+            fetch("http://localhost:5000/api/list")
+            .then((res) => {
+                return res.json();
+            })
+            .then((data) => {
+                // console.log((Object.keys(data)))
+                // console.log((data[0]))
+                // console.log((data[0]["list_name"]))
+                setListState(data)
+            })
+        }, [listState])
+        // console.log(listState[0]["id"])
 
     function deleteList(event) {
         event.preventDefault()
@@ -31,21 +31,23 @@ const SavedList = () => {
     if (listState.id === 0) {
         return null;
     }
-
-   
+    
     return (
+   
         <div className="saved-list-container">    
             {listState.map(item => {
                 return (
                     <ul key={item.id} className="saved-list">
-                        <li className="list">{item["list_name"]}
-                        <button id={item.id} onClick={deleteList} className="delete-btn">DELETE</button>
-                    </li>
+                        <li className="list">
+                            {item["list_name"]}
+                            <button id={item.id} onClick={deleteList} className="delete-btn">DELETE</button>
+                        </li>
                     </ul>
                     )
-                })}
+                })} 
 
             </div>
+
     )
 }
 
